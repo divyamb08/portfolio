@@ -8,7 +8,7 @@ const TAB_DATA = [
     title: "Development Skills",
     id: "sdeskills",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 mb-10">
         <li>Python</li>
         <li>Django</li>
         <li>JavaScript/Typescript</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     title: "Data Science Skills",
     id: "dsskills",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 mb-10">
         <li>SQL</li>
         <li>Pandas</li>
         <li>NumPy</li>
@@ -39,7 +39,7 @@ const TAB_DATA = [
     title: "Education",
     id: "education",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 mb-10">
         <li>Northwestern Univesity</li>
         <li>Manipal Institute of Technology</li>
       </ul>
@@ -49,7 +49,7 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-2">
+      <ul className="list-disc pl-2 mb-10">
         <li>Microsoft Student Hackathon 2021</li>
         <li>Meta React Native Specialization</li>
         <li>The Web Developer Bootcamp</li>
