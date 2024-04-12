@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import ProjectCards from './ProjectCards'
 import ProjectTag from './ProjectTag';
 import { motion, useInView } from "framer-motion";
@@ -45,6 +45,8 @@ const projectsData = [
 
   const ProjectsSection = () => {
     const [tag, setTag] = useState("All");
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
     const handleTabChange = (newTag) => {
         setTag(newTag);
@@ -53,9 +55,13 @@ const projectsData = [
     const filteredProjects = projectsData.filter((project) => 
         project.tag.includes(tag)
     );
+    const cardVariants = {
+        initial: { y: 50, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+      };
 
     return (
-      <>
+        <section id="projects">
       <h2 className='text-center text-4xl font-bold text-white mt-30 mb-8 md:mb-12'>
         My Projects
       </h2>
@@ -64,10 +70,30 @@ const projectsData = [
         <ProjectTag onClick={handleTabChange} name="Web" isSelected={tag === "Web"} />
         <ProjectTag onClick={handleTabChange} name="Data Science & ML" isSelected={tag === "Data Science & ML"} />
       </div>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12 sm:grid-cols-2 sm:gap-8">
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12 sm:grid-cols-2 sm:gap-8">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCards
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
+        ))}
+      </ul>
+      {/* <div className="grid md:grid-cols-3 gap-8 md:gap-12 sm:grid-cols-2 sm:gap-8">
         {filteredProjects.map((project) => (<ProjectCards key={project.id} title={project.title} description={project.description} imgUrl={project.image} gitUrl={project.gitUrl} previewUrl={project.previewUrl} />))}
-      </div>
-      </>
+      </div> */}
+      </section>
     );
   };
   
