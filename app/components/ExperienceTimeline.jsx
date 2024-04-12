@@ -15,7 +15,7 @@ export default function ExperienceTimeline() {
             </svg>
         </span>
         <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory dark:text-white">Software Developer <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
-        <time class="block mb-2 text-2lg leading-none text-white dark:text-gray-500">Bajaj Finserv Limited ~ India's Largest NBFC</time>
+        <time class="block mb-2 text-2lg leading-none text-white dark:text-gray-500">Bajaj Finserv Limited ~ India&apos;s Largest NBFC</time>
         <p class="text-lg text-slate-400">Built responsive Angular PWA components for flagship application.</p>
         <p class="mb-4 text-lg text-slate-400">Developed an application for in-house inventory management.</p>
        
@@ -63,7 +63,7 @@ percentage match for an individual profile with the job description. Visualized 
             </svg>
         </span>
         <h3 class="flex items-center mb-1 text-2xl font-semibold text-ivory dark:text-white">Data Intern</h3>
-        <time class="block mb-2 text-2lg  leading-none text-white dark:text-gray-500">Sports For All, India ~ India's largest tech-enabled sports competition platform</time>
+        <time class="block mb-2 text-2lg  leading-none text-white dark:text-gray-500">Sports For All, India ~ India&apos;s largest tech-enabled sports competition platform</time>
         <p class="text-lg text-slate-400">Implemented MySQL DBMS for up to 50,000 data records with over 5 different merged tables, streamlining dataflow previously
 done in Excel.</p>
         <p class="mb-4 text-lg text-slate-400">Developed an in-house web e-sports platform.</p>
